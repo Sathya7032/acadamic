@@ -81,6 +81,7 @@ class TutorialPost(models.Model):
     post_file = models.CharField(max_length=1000)
     tutorialName = models.ForeignKey(TutorialName, on_delete=models.CASCADE)   
     post_video = models.URLField()
+    user = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
 
     def __str__(self):
         return self.post_title
@@ -136,6 +137,7 @@ class CodeSnippet(models.Model):
     code = models.TextField()
     content = models.TextField()
     topic = models.ForeignKey(Topics,on_delete= models.CASCADE)
+    user = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
 
     def __str__(self):
         return self.title
