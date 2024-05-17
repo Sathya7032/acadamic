@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-tymy3jqf%o+msybpqy_%cn05s-(+z_!h$z#7ln2fac$md(##$$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
+ALLOWED_HOSTS = ['www.acadamicfolio.online']
 
 
 # Application definition
@@ -100,14 +100,14 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'sBUmLYuoJJCByMKNsCFBvsdnZMQENFMi',
+        'HOST':'roundhouse.proxy.rlwy.net',
+        'PORT':'35402',
     }
 }
-
-DATABASES['default'] = dj_database_url.config(
-    default='postgresql://postgres:hcOreFWsMaGadiakRTNPUpJBpewxWFFd@roundhouse.proxy.rlwy.net:57758/railway'
-)
 
 
 # Password validation
