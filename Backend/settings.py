@@ -74,6 +74,7 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://www.acadamicfolio.info",
 ]
 
 TEMPLATES = [
