@@ -262,7 +262,7 @@ def MemeSingle(request, id):
             return redirect('/homepage/')  # Redirect to a detail view or another page
         else:
             messages.error(request, "Please provide a new description or image to update the meme.")
-    return render(request, 'user/singleMeme.html', {'meme': meme})
+    return render(request, 'user/SingleMeme.html', {'meme': meme})
 
 
 @login_required
