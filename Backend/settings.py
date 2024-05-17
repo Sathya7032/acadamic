@@ -99,14 +99,9 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': 'sBUmLYuoJJCByMKNsCFBvsdnZMQENFMi',
-        'HOST':'roundhouse.proxy.rlwy.net',
-        'PORT':'35402',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://postgres:xxfhofuBAMbUEUvjzWgSKBmnsXZghGhc@monorail.proxy.rlwy.net:16804/railway'
+    )
 }
 
 
