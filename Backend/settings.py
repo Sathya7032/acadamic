@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-tymy3jqf%o+msybpqy_%cn05s-(+z_!h$z#7ln2fac$md(##$$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.acadamicfolio.online']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -100,22 +100,14 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
-
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'acadamicfolios$acadamicfolio',
-		'USER': 'acadamicfolios',
-		'PASSWORD': 'Sathi7661$',
-		'HOST':'acadamicfolios.mysql.pythonanywhere-services.com',
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+
 
 
 
